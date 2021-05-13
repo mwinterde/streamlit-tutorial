@@ -6,17 +6,18 @@ def write():
 
     # Voraussetzungen
     st.header("Voraussetzungen")
-    st.markdown("""* Python 
+    st.markdown("""* Python 3.8
 * Google Cloud SDK
 * Docker
 """
 )
 
+    st.header("Ausblick Ordnerstruktur")
     st.code(""".
-├── venv/               # virtual environment for local development
-├── app.py              # source code of the streamlit app
-├── Dockerfile          # list of instructions for building the container image
-└── requirements.txt    # python dependencies
+├── venv/               # Virtuelle Umgebung für lokale Entwicklung
+├── app.py              # Quellcode für die Streamlit App
+├── Dockerfile          # Liste von Anweisungen zur Erstellung eines Docker Image
+└── requirements.txt    # Eingefrorene Python Abhängigkeiten
 """
 )
 
@@ -89,3 +90,5 @@ CMD streamlit run app.py
     st.code("gcloud build submit -t eu.gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest")
     st.markdown("Cloud Run Service erstellen")
     st.code("gcloud run deploy --image eu.gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest --platform managed")
+
+    st.header("Fertig :tada:")
