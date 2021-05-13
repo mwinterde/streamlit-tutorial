@@ -32,7 +32,7 @@ def main():
     st.sidebar.info(
 """Diese Seite befindet sich im Aufbau. Wenn ihr Fehler entdeckt
 oder Verbesserungsvorschläge habt, freue ich mich über eine kurze
-Rückmeldung bei [GitHub](https://github.com/rewe-digital-analytics/ds-streamlit-tutorial/issues) 
+Rückmeldung bei [GitHub](https://github.com/mwinterde/streamlit-tutorial) 
 oder [per Mail](mailto:mw210992@gmail.com).
 """)
 
