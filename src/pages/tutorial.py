@@ -6,6 +6,7 @@ def write():
 
     # Voraussetzungen
     st.header("Voraussetzungen")
+    st.markdown("Das brauchst du zum Mitmachen")
     st.markdown("""* Python 3.8
 * Google Cloud SDK
 * Docker
@@ -13,6 +14,7 @@ def write():
 )
 
     st.header("Ausblick Ordnerstruktur")
+    st.markdown("Das werden wir uns in den nächsten 10 Minuten erarbeiten")
     st.code(""".
 ├── venv/               # Virtuelle Umgebung für lokale Entwicklung
 ├── app.py              # Quellcode für die Streamlit App
@@ -87,8 +89,9 @@ CMD streamlit run app.py
 
     st.header("App mit Google Cloud Run deployen")
     st.markdown("Docker Image in Container Registry hochladen")
-    st.code("gcloud build submit -t eu.gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest")
+    st.code("gcloud builds submit -t eu.gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest")
     st.markdown("Cloud Run Service erstellen")
-    st.code("gcloud run deploy --image eu.gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest --platform managed")
+    st.code("gcloud run deploy --image eu.gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest --platform managed --port 8501")
 
     st.header("Fertig :tada:")
+    st.image("resources/tada.png")
